@@ -55,10 +55,7 @@ async function getColors () {
     http.send(JSON.stringify(data));
 }
 
-function savePaletteLS (color) {
-
-}
-
 generateBtn.addEventListener("click", () => {
+    getColors();
     window.location.reload();
 })
