@@ -9,11 +9,11 @@ async function getColors () {
         model : "default"
     }
 
-    var https = new XMLHttpRequest();
+    var http = new XMLHttpRequest();
 
-    https.onreadystatechange = function() {
-        if(https.readyState == 4 && https.status == 200) {
-            var palette = JSON.parse(https.responseText).result;
+    http.onreadystatechange = function() {
+        if(http.readyState == 4 && http.status == 200) {
+            var palette = JSON.parse(http.responseText).result;
 
             const names = [];
             const colorPaletteNames = document.createElement("ul");
@@ -51,8 +51,8 @@ async function getColors () {
         }
     }
 
-    https.open("POST", url, true);
-    https.send(JSON.stringify(data));
+    http.open("POST", url, true);
+    http.send(JSON.stringify(data));
 }
 
 generateBtn.addEventListener("click", () => {
