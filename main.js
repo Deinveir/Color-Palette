@@ -4,7 +4,7 @@ const generateBtn = document.querySelector('.generate-btn');
 getColors();
 
 async function getColors () {
-    var url = "http://colormind.io/api/";
+    var url = "https://colormind.io/api/";
     var data = {
         model : "default"
     }
